@@ -1,0 +1,130 @@
+/* hilfsweise – Website. Werte aus tokens.json v1.1 / brand.md v0.3 */
+@font-face{font-family:"Source Serif 4";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/source-serif-4-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Serif 4";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/source-serif-4-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/source-sans-3-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Source Sans 3";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/source-sans-3-latin-600-normal.woff2) format("woff2")}
+
+:root{
+  --hw-tintenblau:#1D2D4A;--hw-kupfer:#B5673A;--hw-papier:#F8F5EF;--hw-aktendeckel:#E6DCC6;--hw-graphit:#3B3D40;
+  --hw-serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --hw-sans:"Source Sans 3",Arial,Helvetica,sans-serif;
+  --hw-radius:4px;--hw-space:8px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--hw-papier);color:var(--hw-graphit);font-family:var(--hw-sans);font-size:17px;line-height:1.55}
+img,svg{max-width:100%;height:auto;display:block}
+a{color:var(--hw-tintenblau);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--hw-kupfer);outline-offset:3px}
+.wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--hw-tintenblau);color:var(--hw-papier);padding:8px 16px;border-radius:var(--hw-radius);z-index:10}
+.skip:focus{left:16px}
+
+h1,h2,h3{font-family:var(--hw-serif);color:var(--hw-tintenblau);line-height:1.2;margin:0}
+h1{font-size:40px;font-weight:700}
+h2{font-size:28px;font-weight:700}
+h3{font-size:20px;font-weight:600}
+p{margin:0 0 16px}
+.klein{font-size:14px}
+
+/* Kopf */
+.kopf{padding:24px 0}
+.kopf .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.kopf .logo{width:200px;flex:none}
+.kopf nav{display:flex;gap:24px;font-size:15px;font-weight:600}
+.kopf nav a{text-decoration:none}
+.kopf nav a:hover{text-decoration:underline}
+
+/* Hero */
+.hero{padding:64px 0 96px}
+.hero h1{max-width:16ch;font-size:56px;letter-spacing:-.01em}
+.hero .linie{width:64px;height:2px;background:var(--hw-kupfer);margin:32px 0}
+.hero .lead{max-width:34em;font-size:20px;margin-bottom:32px}
+.knoepfe{display:flex;flex-wrap:wrap;gap:16px}
+.btn{display:inline-block;padding:14px 24px;border-radius:var(--hw-radius);border:2px solid var(--hw-tintenblau);font-weight:600;text-decoration:none;font-size:16px;line-height:1.2}
+.btn.voll{background:var(--hw-tintenblau);color:var(--hw-papier)}
+.btn.voll:hover{background:#16233a}
+.btn.leer{background:transparent;color:var(--hw-tintenblau)}
+.btn.leer:hover{background:var(--hw-aktendeckel)}
+
+/* Flächen */
+section{padding:96px 0}
+.flaeche{background:var(--hw-aktendeckel)}
+.dunkel{background:var(--hw-tintenblau);color:var(--hw-papier)}
+.dunkel h2,.dunkel h3{color:var(--hw-papier)}
+.dunkel a{color:var(--hw-papier)}
+.sec-kopf{max-width:36em;margin-bottom:48px}
+.sec-kopf h2{padding-bottom:16px;border-bottom:2px solid var(--hw-kupfer);display:inline-block}
+.sec-kopf p{margin:24px 0 0;font-size:19px}
+
+/* Versprechen */
+.zahlen{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.zahl{border-top:2px solid var(--hw-kupfer);padding-top:24px}
+.zahl .gross{font-family:var(--hw-serif);font-weight:700;font-size:56px;line-height:1;color:var(--hw-kupfer);margin-bottom:16px}
+.zahl p{margin:0}
+
+/* Leistungen */
+.raster{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.karte{background:var(--hw-aktendeckel);border-radius:var(--hw-radius);padding:32px}
+.flaeche .karte{background:var(--hw-papier)}
+.karte h3{margin-bottom:8px}
+.karte p{margin:0}
+.karte .ebene{font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:8px;color:var(--hw-graphit)}
+.hinweis{margin-top:32px;padding:16px 24px;background:var(--hw-aktendeckel);border-radius:var(--hw-radius);border:2px solid var(--hw-kupfer);font-size:16px}
+.flaeche .hinweis{background:var(--hw-papier)}
+
+/* Ablauf */
+.schritte{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.schritt{border-top:2px solid var(--hw-kupfer);padding-top:16px}
+.schritt h3{margin-bottom:8px}
+.schritt p{margin:0;font-size:16px}
+
+/* Für wen */
+.zwei{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+
+/* Wegweiser */
+.weg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.weg .karte{display:flex;flex-direction:column}
+.weg .karte p{margin-bottom:24px}
+.weg .karte .btn{margin-top:auto;text-align:center}
+
+/* Kontakt */
+.kontakt-liste{list-style:none;margin:0 0 32px;padding:0;display:grid;gap:8px;font-size:19px}
+.kontakt-liste strong{font-weight:600;display:inline-block;min-width:7.5em}
+.dunkel .btn.voll{background:var(--hw-papier);color:var(--hw-tintenblau);border-color:var(--hw-papier)}
+.dunkel .btn.voll:hover{background:var(--hw-aktendeckel)}
+.dunkel .btn.leer{color:var(--hw-papier);border-color:var(--hw-papier)}
+.dunkel .btn.leer:hover{background:rgba(248,245,239,.12)}
+
+/* Fuß */
+.fuss{background:var(--hw-tintenblau);color:var(--hw-papier);padding:48px 0;font-size:15px;border-top:1px solid rgba(248,245,239,.2)}
+.fuss .wrap{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start}
+.fuss .logo{width:160px;margin-bottom:16px}
+.fuss a{color:var(--hw-papier)}
+.fuss address{font-style:normal}
+.fuss ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+
+/* Rechtstexte */
+.text{padding:48px 0 96px;max-width:44em}
+.text h1{font-size:36px;margin-bottom:8px}
+.text h2{font-size:22px;margin:40px 0 8px}
+.text h3{font-size:18px;margin:24px 0 4px}
+.text .entwurf{background:var(--hw-aktendeckel);border:2px solid var(--hw-kupfer);border-radius:var(--hw-radius);padding:16px 24px;margin:24px 0;font-size:15px}
+
+@media (max-width:860px){
+  .wrap{padding:0 16px}
+  section{padding:64px 0}
+  .hero{padding:32px 0 64px}
+  .hero h1{font-size:40px}
+  .hero .lead{font-size:18px}
+  .kopf .logo{width:160px}
+  .kopf nav{display:none}
+  .zahlen,.raster,.schritte,.zwei,.weg{grid-template-columns:1fr}
+  .zahlen{gap:32px}
+  .schritte{gap:32px}
+  .zwei{gap:32px}
+  .karte{padding:24px}
+  .btn{width:100%;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
